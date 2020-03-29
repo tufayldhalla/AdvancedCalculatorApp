@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    android:weightSum="8"
+    tools:context=".Main2Activity">
+
+    <!-- CUSTOM TOOLBAR -->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        app:title="@string/programmer_page"
+        app:titleTextColor="@color/colorPrimary">
+
+    </android.support.v7.widget.Toolbar>
+
+    <!-- INPUT -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:baselineAligned="false">
+
+        <EditText
+            android:id="@+id/input"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textSize="30sp"/>
+
+    </LinearLayout>
+
+    <!-- CONVERT FROM -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:baselineAligned="false">
+
+        <TextView
+            android:id="@+id/convertFrom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:text="@string/convertFrom"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"/>
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_weight="0.5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <!-- CONVERT -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:baselineAligned="false">
+
+        <Button
+            android:id="@+id/convert"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:text="@string/convert"
+            android:onClick="setText"
+            android:gravity="center"
+            android:backgroundTint="@color/background"
+            android:textColor="@color/colorPrimary"
+            android:textSize="30sp"/>
+
+    </LinearLayout>
+
+    <!-- OUTPUT 1 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:baselineAligned="false">
+
+        <TextView
+            android:text="@string/DEC"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"/>
+
+        <android.support.v7.widget.AppCompatCheckedTextView
+            android:id="@+id/dec_output"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textSize="30sp"/>
+
+    </LinearLayout>
+
+    <!-- OUTPUT 2 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:baselineAligned="false">
+
+        <TextView
+            android:text="@string/BIN"
+            android:layout_width="match_parent"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"/>
+
+        <android.support.v7.widget.AppCompatCheckedTextView
+            android:id="@+id/bin_output"
+            android:layout_width="match_parent"
+            android:layout_weight="0.2"
+            android:layout_height="match_parent"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textSize="30sp"/>
+
+    </LinearLayout>
+
+    <!-- OUTPUT 3 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:baselineAligned="false">
+
+        <TextView
+            android:text="@string/HEX"
+            android:layout_width="match_parent"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"/>
+
+        <android.support.v7.widget.AppCompatCheckedTextView
+            android:id="@+id/hex_output"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textSize="30sp"/>
+
+    </LinearLayout>
+
+    <!-- Blank Space -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <android.support.v7.widget.AppCompatCheckedTextView
+            android:id="@+id/blank"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text=""
+            android:layout_weight="2"
+            android:textColor="@android:color/black"
+            android:textSize="50sp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

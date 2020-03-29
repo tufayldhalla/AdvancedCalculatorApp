@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/page_swap"
+        android:title="@string/standard_page"
+        android:icon="@drawable/page_swap"
+        app:showAsAction="always"/>
+</menu>

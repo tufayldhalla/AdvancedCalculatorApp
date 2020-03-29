@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    android:weightSum="8"
+    tools:context=".MainActivity">
+
+    <!-- CUSTOM TOOLBAR -->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        app:title="@string/standard_page"
+        app:titleTextColor="@color/colorPrimary">
+
+    </android.support.v7.widget.Toolbar>
+
+    <!-- PHRASE -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:baselineAligned="false">
+
+        <android.support.v7.widget.AppCompatCheckedTextView
+            android:id="@+id/input"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textSize="50sp"/>
+
+    </LinearLayout>
+
+    <!-- OUTPUT -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5">
+
+        <android.support.v7.widget.AppCompatCheckedTextView
+            android:id="@+id/output"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text=""
+            android:layout_weight="1"
+            android:textColor="@android:color/black"
+            android:textSize="50sp"/>
+
+    </LinearLayout>
+
+    <!-- ROW 1 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/clear"
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:backgroundTint="@color/background"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:text="@string/clear"
+            android:textColor="@color/colorAccent" />
+
+        <Button
+            android:id="@+id/Rbracket"
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/colorPrimary"
+            android:backgroundTint="@color/background"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:layout_weight="1"
+            android:text="@string/Rbracket"
+            android:autoSizeTextType="uniform" />
+
+        <Button
+            android:id="@+id/Lbracket"
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/colorPrimary"
+            android:backgroundTint="@color/background"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:layout_weight="1"
+            android:text="@string/Lbracket"
+            android:autoSizeTextType="uniform" />
+
+        <ImageButton
+            android:id="@+id/back"
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/back"
+            android:scaleType="fitCenter"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <!-- ROW 2 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/num1"
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/background"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:scaleType="fitCenter"
+            android:text="@string/num1"
+            android:autoSizeTextType="uniform" />
+
+        <Button
+            android:id="@+id/num2"
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/background"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:text="@string/num2"
+            android:autoSizeTextType="uniform" />
+
+        <Button
+            android:id="@+id/num3"
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/background"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:text="@string/num3"
+            android:autoSizeTextType="uniform" />
+
+        <Button
+            android:id="@+id/add"
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/colorPrimary"
+            android:backgroundTint="@color/background"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:layout_weight="1"
+            android:text="@string/add"
+            android:autoSizeTextType="uniform"/>
+
+    </LinearLayout>
+
+    <!-- ROW 3 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/num4"
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/background"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:text="@string/num4"
+            android:autoSizeTextType="uniform" />
+
+        <Button
+            android:id="@+id/num5"
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/background"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:text="@string/num5"
+            android:autoSizeTextType="uniform" />
+
+        <Button
+            android:id="@+id/num6"
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/background"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:text="@string/num6"
+            android:autoSizeTextType="uniform" />
+
+        <Button
+            android:id="@+id/sub"
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/background"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:textColor="@color/colorPrimary"
+            android:layout_weight="1"
+            android:text="@string/sub"
+            android:autoSizeTextType="uniform" />
+
+    </LinearLayout>
+
+    <!-- ROW 4 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/num7"
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/background"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:text="@string/num7"
+            android:autoSizeTextType="uniform" />
+
+        <Button
+            android:id="@+id/num8"
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/background"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:text="@string/num8"
+            android:autoSizeTextType="uniform" />
+
+        <Button
+            android:id="@+id/num9"
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/background"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:text="@string/num9"
+            android:autoSizeTextType="uniform" />
+
+        <Button
+            android:id="@+id/multiply"
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="match_parent"
+            android:textColor="@color/colorPrimary"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/background"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:layout_weight="1"
+            android:text="@string/multiply"
+            android:autoSizeTextType="uniform" />
+
+    </LinearLayout>
+
+    <!-- ROW 5 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/decimal"
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/background"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:textColor="@color/colorPrimary"
+            android:layout_weight="1"
+            android:text="@string/decimal"
+            android:autoSizeTextType="uniform" />
+
+        <Button
+            android:id="@+id/num0"
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/background"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:text="@string/num0"
+            android:autoSizeTextType="uniform" />
+
+        <Button
+            android:id="@+id/divide"
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/background"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:layout_weight="1"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/divide"
+            android:autoSizeTextType="uniform" />
+
+        <Button
+            android:id="@+id/equal"
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/equals"
+            android:backgroundTint="@color/colorPrimary"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:autoSizeTextType="uniform" />
+
+    </LinearLayout>
+
+</LinearLayout>
