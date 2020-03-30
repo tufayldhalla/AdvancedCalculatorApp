@@ -92,18 +92,19 @@
         android:baselineAligned="false">
 
         <TextView
-            android:text="@string/DEC"
+            android:id="@+id/output1Text"
+            android:text="@string/BIN"
+            android:layout_width="match_parent"
             android:textColor="@android:color/black"
             android:textSize="30sp"
-            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="0.8"/>
 
         <android.support.v7.widget.AppCompatCheckedTextView
-            android:id="@+id/dec_output"
+            android:id="@+id/output1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
             android:layout_weight="0.2"
+            android:layout_height="match_parent"
             android:text=""
             android:textColor="@android:color/black"
             android:textSize="30sp"/>
@@ -118,32 +119,7 @@
         android:baselineAligned="false">
 
         <TextView
-            android:text="@string/BIN"
-            android:layout_width="match_parent"
-            android:textColor="@android:color/black"
-            android:textSize="30sp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.8"/>
-
-        <android.support.v7.widget.AppCompatCheckedTextView
-            android:id="@+id/bin_output"
-            android:layout_width="match_parent"
-            android:layout_weight="0.2"
-            android:layout_height="match_parent"
-            android:text=""
-            android:textColor="@android:color/black"
-            android:textSize="30sp"/>
-
-    </LinearLayout>
-
-    <!-- OUTPUT 3 -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:baselineAligned="false">
-
-        <TextView
+            android:id="@+id/output2Text"
             android:text="@string/HEX"
             android:layout_width="match_parent"
             android:textColor="@android:color/black"
@@ -152,7 +128,7 @@
             android:layout_weight="0.8"/>
 
         <android.support.v7.widget.AppCompatCheckedTextView
-            android:id="@+id/hex_output"
+            android:id="@+id/output2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="0.2"
@@ -166,7 +142,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2">
+        android:layout_weight="3">
 
         <android.support.v7.widget.AppCompatCheckedTextView
             android:id="@+id/blank"

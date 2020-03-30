@@ -35,9 +35,10 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
         return super.onOptionsItemSelected(item);
     }
 
-    TextView dec_output;
-    TextView bin_output;
-    TextView hex_output;
+    TextView output1;
+    TextView output2;
+    TextView output1Text;
+    TextView output2Text;
     EditText input;
     String input_string_type;
 
@@ -55,9 +56,10 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
         spinner.setOnItemSelectedListener(Main2Activity.this);
         spinner.setAdapter(adapter);
 
-        dec_output = findViewById(R.id.dec_output);
-        bin_output = findViewById(R.id.bin_output);
-        hex_output = findViewById(R.id.hex_output);
+        output1 = findViewById(R.id.output1);
+        output2 = findViewById(R.id.output2);
+        output1Text = findViewById(R.id.output1Text);
+        output2Text = findViewById(R.id.output2Text);
         input = findViewById(R.id.input);
 
     }
@@ -67,18 +69,15 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
         if (!(newText.equals(""))) {
             try {
                 if (input_string_type.equals("DEC")) {
-                    dec_output.setText(newText);
-                    bin_output.setText(Integer.toBinaryString(Integer.parseInt(newText)));
-                    hex_output.setText(Integer.toHexString(Integer.parseInt(newText)).toUpperCase());
+                    output1.setText(Integer.toBinaryString(Integer.parseInt(newText)));
+                    output2.setText(Integer.toHexString(Integer.parseInt(newText)).toUpperCase());
                 } else if (input_string_type.equals("BIN")) {
-                    dec_output.setText(String.valueOf(Integer.parseInt(newText, 2)));
-                    bin_output.setText(newText);
+                    output1.setText(String.valueOf(Integer.parseInt(newText, 2)));
                     int decimal = Integer.parseInt(newText, 2);
-                    hex_output.setText(Integer.toString(decimal, 16));
+                    output2.setText(Integer.toString(decimal, 16));
                 } else if (input_string_type.equals("HEX")) {
-                    dec_output.setText(String.valueOf(Integer.parseInt(newText, 16)));
-                    bin_output.setText(Integer.toBinaryString(Integer.parseInt(newText, 16)));
-                    hex_output.setText(newText);
+                    output1.setText(String.valueOf(Integer.parseInt(newText, 16)));
+                    output2.setText(Integer.toBinaryString(Integer.parseInt(newText, 16)).toUpperCase());
                 }
             }
             catch (Exception e) {
@@ -96,12 +95,24 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
         switch (position) {
             case 0:
                 input_string_type = "DEC";
+                output1Text.setText("BIN");
+                output2Text.setText("HEX");
+                output1.setText("");
+                output2.setText("");
                 break;
             case 1:
                 input_string_type = "BIN";
+                output1Text.setText("DEC");
+                output2Text.setText("HEX");
+                output1.setText("");
+                output2.setText("");
                 break;
             case 2:
                 input_string_type = "HEX";
+                output1Text.setText("DEC");
+                output2Text.setText("BIN");
+                output1.setText("");
+                output2.setText("");
                 break;
         }
     }
