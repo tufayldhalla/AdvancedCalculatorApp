@@ -14,7 +14,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class MainActivity extends AppCompatActivity {
+public class StandardCalculatorMode extends AppCompatActivity {
 
     //Add
     @Override
@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.page_swap) {
-            Intent intent = new Intent(this, Main2Activity.class);
+            Intent intent = new Intent(this, ProgrammerMode.class);
             startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
                     output.setText(outputVal);
                 }
                 catch (Exception e) {
-                    Toast.makeText(MainActivity.this, "Invalid Expression", Toast.LENGTH_LONG).show();
+                    Toast.makeText(StandardCalculatorMode.this, "Invalid Expression", Toast.LENGTH_LONG).show();
                 }
             }
             //Add character to input expression

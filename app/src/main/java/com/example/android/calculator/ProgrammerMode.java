@@ -18,7 +18,7 @@ import android.widget.Toast;
 import net.yslibrary.android.keyboardvisibilityevent.util.UIUtil;
 
 
-public class Main2Activity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class ProgrammerMode extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -29,7 +29,7 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.page_swap) {
-            Intent intent = new Intent(this, MainActivity.class);
+            Intent intent = new Intent(this, StandardCalculatorMode.class);
             startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
@@ -53,7 +53,7 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
         String[] convertOptions = {"DEC", "BIN", "HEX"};
         ArrayAdapter <String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, convertOptions);
         adapter.setDropDownViewResource(R.layout.spinner_design);
-        spinner.setOnItemSelectedListener(Main2Activity.this);
+        spinner.setOnItemSelectedListener(ProgrammerMode.this);
         spinner.setAdapter(adapter);
 
         output1 = findViewById(R.id.output1);
@@ -81,7 +81,7 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
                 }
             }
             catch (Exception e) {
-                Toast.makeText(Main2Activity.this,
+                Toast.makeText(ProgrammerMode.this,
                         "Invalid Entry", Toast.LENGTH_LONG).show();
             }
         }

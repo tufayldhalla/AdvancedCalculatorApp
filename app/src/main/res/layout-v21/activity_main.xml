@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:background="@drawable/background"
     android:weightSum="8"
-    tools:context=".MainActivity">
+    tools:context=".StandardCalculatorMode">
 
     <!-- CUSTOM TOOLBAR -->
     <android.support.v7.widget.Toolbar
